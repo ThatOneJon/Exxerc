@@ -18,8 +18,9 @@ def main():
     #print(hexa())
     #revInt()
     #average()
-    print(conv_Add())
-
+    #print(conv_Add())
+    print(param_Count(3, 4, 5))
+    print(xOR())
 
 def beerSong():
     for i in range(1, 100):
@@ -155,8 +156,17 @@ def conv_Add():
         return ("only positive ints")
 
 
+def param_Count(*args):
+    arguments = list(args)
+    return len(arguments)
 
+def xOR():
+    list1_xor = [1, [1, 2, 3], [4, 5, 6, 1]]
+    if (list1_xor[0] in list1_xor[1]) ^ (list1_xor[0] in list1_xor[2]):
+        return True
 
+    else:
+        return False
 
 
 
