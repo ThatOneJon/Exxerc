@@ -19,8 +19,11 @@ def main():
     #revInt()
     #average()
     #print(conv_Add())
-    print(param_Count(3, 4, 5))
-    print(xOR())
+    #print(param_Count(3, 4, 5))
+    #print(xOR())
+    #print(countXO())
+    #print(creditCard())
+    print(doubleString())
 
 def beerSong():
     for i in range(1, 100):
@@ -167,6 +170,33 @@ def xOR():
 
     else:
         return False
+
+
+def countXO():
+    sentence = input("A sentence, which has X and O!").replace(" ", "").lower()
+    
+    X = len(list(filter(lambda i : i == "x",sentence)))
+    O = len(list(filter(lambda y : y == "o", sentence)))
+
+    return f"number of X: {X} \nnumber of O: {O}"
+
+def creditCard():
+    number = 44432333334
+    numberFin = ""
+    for _ in range(0, len(str(number)) - 4):
+        numberFin = numberFin + "*"
+
+    for i in range(len(str(number))-4, len(str(number))):
+        numberFin = numberFin + str(number)[i]
+
+    return f"Your credit Card number:  {numberFin}"
+
+
+def doubleString():
+    string = input("A String: ")
+    return "".join(list(map(lambda i : i*2, string)))
+
+
 
 
 
